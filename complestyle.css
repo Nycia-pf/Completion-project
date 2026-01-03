@@ -1,0 +1,409 @@
+/* Conteneur principal */
+#app {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(43, 38, 35);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* Style des "pages" */
+.page {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background-color: rgb(43, 38, 35);
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.page.active {
+  opacity: 1;
+}
+
+/* Button corner */
+.btn-blue-active,
+.btn-violet-active,
+.btn-pink-active,
+.btn-green-active {
+  background-color: rgba(31, 140, 187);
+  border: 2px solid rgba(12, 54, 73);
+  border-radius: 28px;
+  box-shadow: rgba(12, 54, 73) -3px 3px 0 0;
+  color: rgba(12, 54, 73);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 28px;
+  padding: 0 18px;
+  line-height: 54px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: "Bungee Shade", sans-serif;
+}
+.btn-violet-active {
+  background-color: rgba(136, 98, 162);
+  border: 2px solid rgba(64, 46, 76);
+  box-shadow: rgba(64, 46, 76) -3px 3px 0 0;
+  color: rgba(64, 46, 76);
+}
+.btn-pink-active {
+  background-color: rgba(198, 62, 123);
+  border: 2px solid rgba(96, 29, 59);
+  box-shadow: rgba(96, 29, 59) -3px 3px 0 0;
+  color: rgba(96, 29, 59);
+}
+
+.btn-green-active {
+  background-color: rgba(128, 168, 62);
+  border: rgba(64, 85, 31) 2px solid;
+  box-shadow: rgba(64, 85, 31) -3px 3px 0 0;
+  color: rgba(64, 85, 31);
+}
+
+.btn-blue-active:active,
+.btn-violet-active:active,
+.btn-pink-active:active,
+.btn-green-active:active {
+  box-shadow: rgba(12, 54, 73) -2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+.btn-violet-active:active {
+  box-shadow: rgba(64, 46, 76) -2px 2px 0 0;
+}
+
+.btn-pink-active:active {
+  box-shadow: rgba(96, 29, 59) -2px 2px 0 0;
+}
+
+.btn-green-active:active {
+  box-shadow: rgba(64, 85, 31) -2px 2px 0 0;
+}
+
+@media (min-width: 768px) {
+  .btn-blue-active,
+  .btn-violet-active,
+  .btn-pink-active,
+  .btn-green-active,
+  .btn-blue,
+  .btn-violet,
+  .btn-pink,
+  .btn-green {
+    /* min-width: 120px; */
+    padding: 0 18px;
+  }
+}
+
+.btn-blue,
+.btn-violet,
+.btn-pink,
+.btn-green {
+  background-color: rgba(12, 54, 73);
+  border: 2px solid rgba(31, 140, 187);
+  border-radius: 28px;
+  box-shadow: rgba(31, 140, 187) -3px 3px 0 0;
+  color: rgba(31, 140, 187);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 28px;
+  padding: 0 18px;
+  line-height: 54px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: "Bungee Shade", sans-serif;
+}
+
+.btn-violet {
+  background-color: rgba(64, 46, 76);
+  border: 2px solid rgba(136, 98, 162);
+  box-shadow: rgba(136, 98, 162) -3px 3px 0 0;
+  color: rgba(136, 98, 162);
+}
+.btn-pink {
+  background-color: rgba(96, 29, 59);
+  border: 2px solid rgba(198, 62, 123);
+  box-shadow: rgba(198, 62, 123) -3px 3px 0 0;
+  color: rgba(198, 62, 123);
+}
+
+.btn-green {
+  background-color: rgba(64, 85, 31);
+  border: rgba(128, 168, 62) 2px solid;
+  box-shadow: rgba(128, 168, 62) -3px 3px 0 0;
+  color: rgba(128, 168, 62);
+}
+
+.btn-blue:hover,
+.btn-violet:hover,
+.btn-pink:hover,
+.btn-green:hover {
+  background-color: rgb(43, 38, 35);
+}
+
+.btn-blue:active,
+.btn-violet:active,
+.btn-pink:active,
+.btn-green:active {
+  box-shadow: rgba(12, 54, 73) -2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+/* --- Accueil Mise en forme ---*/
+
+/* --- Segmentation des pages --- */
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  grid-template-rows: 1fr 100px;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* Partie principale (contenu) */
+.content {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 20px 0 20px 50px;
+  background-color: rgb(43, 38, 35);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.intro {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 20px 0 20px 300px;
+  background-color: rgb(43, 38, 35);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.bottom-nav {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  background-color: rgb(43, 38, 35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.bottom-nav ul {
+  list-style: none;
+  padding: 0 100px 0 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.progress-bar {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: rgb(43, 38, 35);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.progress-container {
+  width: 30%;
+  background-image: linear-gradient(
+    rgba(198, 62, 123),
+    rgba(136, 98, 162),
+    rgba(128, 168, 62),
+    rgba(31, 140, 187)
+  );
+  border-radius: 28px;
+  border: 2px solid;
+  border-color: rgb(234, 222, 206);
+  height: 450px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.progress {
+  background-color: #444;
+  border-radius: 28px 28px 0 0;
+  transition-delay: 3s;
+  transition: 5s;
+}
+
+/* --- Accueil Page --- */
+
+.btn-start {
+  font-family: "Bungee Shade", sans-serif;
+  font-size: 40px;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 3px solid rgb(234, 222, 206);
+  border-radius: 20px;
+  transition: color 0.5s ease, transform 0.5s ease, letter-spacing 0.5s ease;
+  cursor: pointer;
+  background-color: transparent;
+  color: rgb(234, 222, 206);
+}
+
+.btn-start:hover {
+  background-image: linear-gradient(
+    to bottom left,
+    rgba(198, 62, 123, 1),
+    rgba(136, 98, 162, 1),
+    rgba(128, 168, 62, 1),
+    rgba(31, 140, 187, 1)
+  );
+  letter-spacing: 2px;
+  transform: translateY(-2px);
+  background-size: 200% 200%;
+  animation: gradientMove 3s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.btn-next-blue {
+  font-size: 25px;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 3px solid rgb(234, 222, 206);
+  border-radius: 20px;
+  transition: color 0.5s ease, transform 0.5s ease, letter-spacing 0.5s ease;
+  cursor: pointer;
+  background-color: transparent;
+  color: rgb(234, 222, 206);
+}
+
+.btn-next-blue:hover {
+  background-image: linear-gradient(
+    to bottom left,
+    rgba(31, 140, 187),
+    rgba(12, 54, 73),
+    rgba(12, 54, 73),
+    rgba(31, 140, 187)
+  );
+  transform: translateY(-2px);
+  background-size: 200% 200%;
+  animation: gradientMove 5s ease infinite;
+  display: inline-block;
+}
+
+.completion-title {
+  font-family: "Bungee Shade", sans-serif;
+  font-size: 75px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 0;
+  background-image: linear-gradient(
+    to bottom left,
+    rgba(198, 62, 123, 1),
+    rgba(136, 98, 162, 1),
+    rgba(128, 168, 62, 1),
+    rgba(31, 140, 187, 1)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  white-space: nowrap;
+  overflow: visible;
+  line-height: 1;
+}
+
+body,
+p {
+  font-family: "Gaegu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgb(43, 38, 35);
+  color: rgb(234, 222, 206);
+  font-size: 26px;
+  cursor: url("cursor.svg"), auto; /* marche pas */
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  cursor: none;
+  overflow: hidden;
+}
+
+#container > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: none;
+}
+#simulations,
+#slideshow {
+  position: absolute;
+  width: 960px;
+  height: 540px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#simulations canvas,
+#slideshow > div {
+  position: absolute;
+}
+#slideshow .box.image {
+  background-size: 100% 100%;
+}
+
+/* --- Partie Transition --- */
+.transitionable {
+  transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out,
+    top 0.3s ease-in-out;
+}
+
+#pixel {
+  position: absolute;
+  cursor: none;
+  display: none;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* TEST */
+
+/**/
