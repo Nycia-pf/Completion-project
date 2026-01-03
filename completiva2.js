@@ -74,26 +74,17 @@ const pages = {
   data: `
     <div class="page active">
     <div class="main-container">
-    <main class="content">
-      <h1>Data</h1>
-      <p>Page DOUBLE : Explications + Data </p>
-      <p>Page 1 : EXPLICATIONS <br/>
-      - collecter des données = où ? quand ? <br/>
-      - bouton "LOAD DATA" (.btn-next)<br/>
-      - Barre de complétion 12%<br/><br/>
-
-      Page 2 : DATA
-      - Boîtes que l'on peut survoler pour découvrir les infos (défilements vers le haut)<br/>
-      * box1 --> Ratings (Average, No de chaque étoile, No de notes)
-      * box2 --> Game (Title, developer, Date)
-      * box3 --> Platforms 
-      * box4 --> Status (Completion status)
-      * box5 --> Summary
-      * box6 --> Time (Average, finish, master)
-      * box7 --> Share ?? j'aime pas ce nom :( (No reviews/like/list/wishlist) <br/>
-      - bouton "ANALYSE" (.btn-next) <br/>
-      - barre de complétion qui monte au fur et à mesure qu'on passe devant chaque boîte
-      --> up to 26%</p>
+    <main class="intro">
+      <div class="box transitionable" style="opacity: 1; display: block; left: 300px; width: 800px; height: 540px; text-align: center;" id="intro"><br/><br/><br/>
+As this is a <span style="text-decoration: underline;
+  text-decoration-color:rgba(31, 140, 187);text-decoration-style: dashed;">data</span> study, we will need them to perform analysis...<br/> <br/><span style="font-size:28px; font-weight: 700;">THE DATA</span> used here are the result of scraping the website <a href="https://backloggd.com/" style="color:rgba(31, 140, 187)">Backloggd</a>, on november 2025.<br/>
+The collection took over 10 000 of the more popular games of the platform.
+<br/><span style="color:#6f6767">
+/!\ The <span style="text-decoration: underline;
+  text-decoration-color:rgb(234, 222, 206);text-decoration-style: dashed;">MORE</span> rated,  not the <span style="text-decoration: underline;
+  text-decoration-color:rgb(234, 222, 206);text-decoration-style: dashed;">HIGHEST</span>-rated, which would've biased the analysis /!\</span><br/>
+<br/>
+	<div class="btn-next-blue">LOAD <span style="font-family:'Bungee Shade', sans-senrif;">DATA</span><div class="rarr"></div> </div></div>
     </main>
     <aside class="progress-bar">
     <div class="progress-container">
