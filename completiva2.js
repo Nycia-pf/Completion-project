@@ -44,7 +44,7 @@ const pages = {
 	<br><br>
 	After a bit of a thought, I was left wondering : 
 	<br>
-	<span style="font-size:23px; font-family:'Bungee Shade', sans-serif;">Does someone who has <span style="
+	<span style="font-size:27px; text-transform: uppercase;">Does someone who has <span style="
   color: rgb(31, 140, 187)">completely</span> finished a game prefer it to someone who has <span style="
   color:rgb(31, 140, 187)">simply played</span> it ?</span>
 <br/>
@@ -75,16 +75,16 @@ const pages = {
     <div class="page active">
     <div class="main-container">
     <main class="intro">
-      <div class="box transitionable" style="opacity: 1; display: block; left: 300px; width: 800px; height: 540px; text-align: center;" id="intro"><br/><br/><br/>
+      <div class="box transitionable" style="opacity: 1; display: block; left: 300px; width: 800px; height: 540px; text-align: center;" id="intro"><br/><br/><br/><br/>
 As this is a <span style="text-decoration: underline;
-  text-decoration-color:rgba(31, 140, 187);text-decoration-style: dashed;">data</span> study, we will need them to perform analysis...<br/> <br/><span style="font-size:28px; font-weight: 700;">THE DATA</span> used here are the result of scraping the website <a href="https://backloggd.com/" style="color:rgba(31, 140, 187)">Backloggd</a>, on november 2025.<br/>
-The collection took over 10 000 of the more popular games of the platform.
-<br/><span style="color:#6f6767">
-/!\ The <span style="text-decoration: underline;
+  text-decoration-color:rgba(31, 140, 187);text-decoration-style: dashed;">data</span> study, we'll need some to perform analysis...<br/> <br/><span style="font-size:28px; font-weight: 700;">THE DATA</span> used here are the result of<br/>scraping the website <a href="https://backloggd.com/" style="color:rgba(31, 140, 187)">Backloggd</a>, on november 2025.<br/>
+The collection took over 10 000 of<br/>the most popular games of the platform.
+<br/><br/><br/><span style="color:#6f6767">
+/!&#92; The <span style="text-decoration: underline;
   text-decoration-color:rgb(234, 222, 206);text-decoration-style: dashed;">MORE</span> rated,  not the <span style="text-decoration: underline;
-  text-decoration-color:rgb(234, 222, 206);text-decoration-style: dashed;">HIGHEST</span>-rated, which would've biased the analysis /!\</span><br/>
+  text-decoration-color:rgb(234, 222, 206);text-decoration-style: dashed;">HIGHEST</span>-rated,<br/>which would've biased the analysis /!&#92; </span><br/>
 <br/>
-	<div class="btn-next-blue">LOAD <span style="font-family:'Bungee Shade', sans-senrif;">DATA</span><div class="rarr"></div> </div></div>
+	<div class="btn-next-blue" data-page="data_bis">LOAD <span style="font-style:'Bungee Shade', sans-serif;">DATA</span><div class="rarr"></div> </div></div>
     </main>
     <aside class="progress-bar">
     <div class="progress-container">
