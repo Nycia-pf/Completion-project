@@ -164,8 +164,8 @@
 /* --- Segmentation des pages --- */
 .main-container {
   display: grid;
-  grid-template-columns: 1fr 100px;
-  grid-template-rows: 1fr 100px;
+  grid-template-columns: 1fr 8%;
+  grid-template-rows: 1fr 15%;
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
@@ -176,7 +176,7 @@
 .content {
   grid-column: 1;
   grid-row: 1;
-  padding: 20px 0 20px 50px;
+  margin: 0 auto;
   background-color: rgb(43, 38, 35);
   overflow-x: hidden;
   overflow-y: hidden;
@@ -185,7 +185,7 @@
 .intro {
   grid-column: 1;
   grid-row: 1;
-  padding: 20px 0 20px 300px;
+  margin: 0 auto;
   background-color: rgb(43, 38, 35);
   overflow-x: hidden;
   overflow-y: hidden;
@@ -204,8 +204,8 @@
 
 .bottom-nav ul {
   list-style: none;
-  padding: 0 100px 0 0;
-  margin: 0;
+  padding: 0 5% 0 0;
+  margin: 0 auto;
   display: flex;
   gap: 15px;
 }
@@ -234,6 +234,7 @@
   border: 2px solid;
   border-color: rgb(234, 222, 206);
   height: 450px;
+  animation: gradientMove 3s ease infinite;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -385,9 +386,9 @@ p {
 #slideshow > div {
   position: absolute;
 }
-#slideshow .box.image {
+/* #slideshow .box.image {
   background-size: 100% 100%;
-}
+} */
 
 /* --- Partie Transition --- */
 .transitionable {
@@ -404,6 +405,91 @@ p {
   height: 100%;
 }
 
+/* Griddo Islando */
+.grid-data {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 25px;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-data > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-area: 3 / 4 / span 3 / span 2;
+  border: 3px solid rgba(96, 29, 59);
+  border-radius: 20px;
+  word-break: normal;
+  background-color: rgba(198, 62, 123, 1);
+}
+
+.item2 {
+  grid-area: 2 / 1 / span 3 / span 3;
+  border: 3px solid rgba(128, 168, 62, 1);
+  border-radius: 20px;
+  word-break: normal;
+  background-color: rgba(64, 85, 31);
+}
+
+.item3 {
+  grid-area: 4 / 6 / span 1 / span 3;
+  border: 3px solid rgb(64, 85, 31);
+  border-radius: 20px;
+  word-break: normal;
+  background-color: rgba(128, 168, 62, 1);
+}
+
+.item4 {
+  grid-area: 5 / 2 / span 1 / span 2;
+  border: 3px solid rgba(12, 54, 73);
+  border-radius: 20px;
+  word-break: normal;
+  background-color: rgba(31, 140, 187, 1);
+}
+
+.item5 {
+  grid-area: 1 / 4 / span 2 / span 3;
+  border: 3px solid rgba(64, 46, 76);
+  border-radius: 20px;
+  word-break: normal;
+  background-color: rgba(136, 98, 162, 1);
+}
+
+.item6 {
+  grid-area: 5 / 6 / span 1 / span 2;
+  border: 3px solid rgba(136, 98, 162, 1);
+  border-radius: 20px;
+  word-break: normal;
+  background-color: rgba(64, 46, 76);
+}
+
+.item7 {
+  grid-area: 2 / 7 / span 2 / span 2;
+  border: 3px solid rgba(31, 140, 187, 1);
+  border-radius: 20px;
+  word-break: normal;
+  background-color: rgba(12, 54, 73);
+}
+
+.item8 {
+  grid-area: 5 / 8 / span 1 / span 1;
+  word-break: normal;
+}
+.data-box {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0 0;
+  background-color: rgb(43, 38, 35);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 /* TEST */
 
 /**/

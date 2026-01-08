@@ -9,6 +9,31 @@
       @import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Gaegu:wght@400;700&family=Jersey+10&family=Oldenburg&display=swap");
     </style>
     <link rel="icon" type="image/jpeg" href="tanche_de_pain copie.jpeg" />
+    <script>
+      (function () {
+        const redirectPage = sessionStorage.getItem("redirectPage");
+        const redirectHash = sessionStorage.getItem("redirectHash");
+
+        if (redirectPage) {
+          sessionStorage.removeItem("redirectPage");
+          sessionStorage.removeItem("redirectHash");
+
+          if (redirectHash) {
+            window.location.hash = redirectHash;
+          } else {
+            window.location.hash = redirectPage;
+          }
+        }
+
+        window.addEventListener("load", function () {
+          if (!window.location.hash && !redirectPage) {
+            setTimeout(function () {
+              window.location.hash = "accueil";
+            }, 100);
+          }
+        });
+      })();
+    </script>
   </head>
   <body>
     <div id="app">

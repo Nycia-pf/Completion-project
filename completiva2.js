@@ -108,24 +108,21 @@ The collection took over 10 000 of<br/>the most popular games of the platform.
   data_bis: `
     <div class="page active">
     <div class="main-container">
-    <main class="content">
-      <h1>Data Bis</h1>
-      Page 2 : DATA
-      - Boîtes que l'on peut survoler pour découvrir les infos (défilements vers le haut)<br/>
-      * box1 --> Ratings (Average, No de chaque étoile, No de notes)
-      * box2 --> Game (Title, developer, Date)
-      * box3 --> Platforms 
-      * box4 --> Status (Completion status)
-      * box5 --> Summary
-      * box6 --> Time (Average, finish, master)
-      * box7 --> Share ?? j'aime pas ce nom :( (No reviews/like/list/wishlist) <br/>
-      - bouton "ANALYSE" (.btn-next) <br/>
-      - barre de complétion qui monte au fur et à mesure qu'on passe devant chaque boîte
-      --> up to 26%</p>
+    <main class="data-box">
+      <div class="box transitionable" style="opacity: 1; display: block; width: 90%; height: 96%; text-align: center;" id="intro"><div class="grid-data">
+  <div class="item1"><div>Ratings</div></div>
+  <div class="item2">Completion<br>status</div>
+  <div class="item3">Platforms</div>  
+  <div class="item4">Game</div>
+  <div class="item5">Summary</div>
+  <div class="item6">Share</div>
+  <div class="item7">Time</div>
+  <div class="item8"><div class="btn-next-blue" data-page="graph" style="font-family:'Bungee Shade',sans-serif">Analyse<br>...<div class="rarr"></div> </div></div></div>
+</div>
     </main>
     <aside class="progress-bar">
     <div class="progress-container">
-        <div class="progress" style="height: 88%;"></div>
+        <div class="progress" style="height: 74%;"></div>
       </div>
     </aside>
       <nav class="bottom-nav">
@@ -352,45 +349,74 @@ The collection took over 10 000 of<br/>the most popular games of the platform.
 
 // FUNCTION PART
 
-// Cliquer vers une page
+let currentPage = "accueil";
+
+// Fonction pour naviguer
+function navigateTo(pageName) {
+  if (!pages[pageName]) {
+    console.error(`Page ${pageName} not found`);
+    pageName = "accueil";
+  }
+
+  currentPage = pageName;
+  document.getElementById("app").innerHTML = pages[pageName];
+
+  // Mettre à jour l'URL avec hash
+  if (window.location.hash !== `#${pageName}`) {
+    window.location.hash = pageName;
+  }
+
+  // Réattacher les événements
+  attachButtonListeners();
+}
+
 function handleButtonClick(event) {
   event.preventDefault();
   const page = this.getAttribute("data-page");
-  if (page) {
+  if (page && pages[page]) {
     navigateTo(page);
   }
 }
 
-// Aller à une "page"
-function navigateTo(pageName) {
-  document.getElementById("app").innerHTML = pages[pageName];
-  history.pushState({ page: pageName }, "", `/${pageName}`);
-
-  // Ajoute des écouteurs d'événements aux nouveaux boutons
+function attachButtonListeners() {
   document
     .querySelectorAll(
-      ".btn-start, .btn-blue, .btn-green, .btn-violet, .btn-pink, .btn-blue-active, .btn-green-active, .btn-violet-active, .btn-pink-active, .btn-next-blue"
+      ".btn-start, .btn-blue, .btn-green, .btn-violet, .btn-pink, .btn-blue-active, .btn-green-active, .btn-violet-active, .btn-pink-active, .btn-next-blue, [data-page]"
     )
     .forEach((button) => {
+      // Retirer l'ancien écouteur avant d'en ajouter un nouveau
+      button.removeEventListener("click", handleButtonClick);
       button.addEventListener("click", handleButtonClick);
     });
 }
 
-// Écouteur pour le bouton "précédent" du navigateur
-window.addEventListener("popstate", (event) => {
-  if (event.state) {
-    document.getElementById("app").innerHTML = pages[event.state.page];
+// Initialisation au chargement
+window.addEventListener("load", () => {
+  // Vérifier si on vient d'un rafraîchissement
+  const hash = window.location.hash.substring(1);
+  const availablePages = Object.keys(pages);
 
-    // Réattache les écouteurs d'événements après le popstate
-    document
-      .querySelectorAll(
-        ".btn-start, .btn-blue, .btn-green, .btn-violet, .btn-pink, .btn-blue-active, .btn-green-active, .btn-violet-active, .btn-pink-active, .btn-next-blue"
-      )
-      .forEach((button) => {
-        button.addEventListener("click", handleButtonClick);
-      });
+  if (hash && availablePages.includes(hash)) {
+    navigateTo(hash);
+  } else {
+    // Toujours rediriger vers l'accueil au chargement initial
+    navigateTo("accueil");
   }
 });
 
-// Charger la page initiale
-navigateTo("accueil");
+// Gérer les changements de hash (navigation avec boutons précédent/suivant)
+window.addEventListener("hashchange", () => {
+  const hash = window.location.hash.substring(1);
+  const availablePages = Object.keys(pages);
+
+  if (hash && availablePages.includes(hash)) {
+    currentPage = hash;
+    document.getElementById("app").innerHTML = pages[hash];
+    attachButtonListeners();
+  }
+});
+
+// Pour gérer le rafraîchissement sur GitHub Pages
+window.addEventListener("beforeunload", () => {
+  // On ne fait rien ici car GitHub Pages nécessite une autre approche
+});
