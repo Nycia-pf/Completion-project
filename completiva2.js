@@ -390,21 +390,12 @@ function attachButtonListeners() {
     });
 }
 
-// Initialisation au chargement
 window.addEventListener("load", () => {
-  // Vérifier si on vient d'un rafraîchissement
   const hash = window.location.hash.substring(1);
   const availablePages = Object.keys(pages);
-
-  if (hash && availablePages.includes(hash)) {
-    navigateTo(hash);
-  } else {
-    // Toujours rediriger vers l'accueil au chargement initial
-    navigateTo("accueil");
-  }
+  navigateTo("accueil");
 });
 
-// Gérer les changements de hash (navigation avec boutons précédent/suivant)
 window.addEventListener("hashchange", () => {
   const hash = window.location.hash.substring(1);
   const availablePages = Object.keys(pages);
