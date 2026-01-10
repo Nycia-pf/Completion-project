@@ -286,7 +286,8 @@
     background-position: 0% 50%;
   }
 }
-.btn-next-blue {
+.btn-next-blue,
+.btn-next-green {
   font-size: 25px;
   display: inline-block;
   padding: 15px 30px;
@@ -298,7 +299,8 @@
   color: rgb(234, 222, 206);
 }
 
-.btn-next-blue:hover {
+.btn-next-blue:hover,
+.btn-next-green:hover {
   background-image: linear-gradient(
     to bottom left,
     rgba(31, 140, 187),
@@ -310,6 +312,16 @@
   background-size: 200% 200%;
   animation: gradientMove 5s ease infinite;
   display: inline-block;
+}
+
+.btn-next-green:hover {
+  background-image: linear-gradient(
+    to bottom left,
+    rgba(128, 168, 62),
+    rgba(64, 85, 31),
+    rgba(64, 85, 31),
+    rgba(128, 168, 62)
+  );
 }
 
 .completion-title {
@@ -386,24 +398,6 @@ p {
 #slideshow > div {
   position: absolute;
 }
-/* #slideshow .box.image {
-  background-size: 100% 100%;
-} */
-
-/* --- Partie Transition --- */
-.transitionable {
-  transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out,
-    top 0.3s ease-in-out;
-}
-
-#pixel {
-  position: absolute;
-  cursor: none;
-  display: none;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-}
 
 /* Griddo Islando */
 .grid-data {
@@ -422,15 +416,22 @@ p {
   font-size: 30px;
 }
 
-.item1 {
+.data1 {
   grid-area: 3 / 4 / span 3 / span 2;
-  border: 3px solid rgba(96, 29, 59);
+  border: 3px solid rgba(198, 62, 123, 1);
   border-radius: 20px;
   word-break: normal;
-  background-color: rgba(198, 62, 123, 1);
+  background-color: rgba(96, 29, 59);
 }
 
-.item2 {
+.data1:hover {
+  border: 3px solid rgb(234, 222, 206);
+  background-color: rgba(198, 62, 123, 1);
+  transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out,
+    top 0.3s ease-in-out;
+}
+
+.data2 {
   grid-area: 2 / 1 / span 3 / span 3;
   border: 3px solid rgba(128, 168, 62, 1);
   border-radius: 20px;
@@ -438,31 +439,39 @@ p {
   background-color: rgba(64, 85, 31);
 }
 
-.item3 {
+.data3 {
   grid-area: 4 / 6 / span 1 / span 3;
-  border: 3px solid rgb(64, 85, 31);
+  border: 3px solid rgba(128, 168, 62, 1);
   border-radius: 20px;
   word-break: normal;
+  background-color: rgb(64, 85, 31);
+}
+
+.data2:hover,
+.data3:hover {
+  border: 3px solid rgb(234, 222, 206);
   background-color: rgba(128, 168, 62, 1);
+  transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out,
+    top 0.3s ease-in-out;
 }
 
-.item4 {
+.data4 {
   grid-area: 5 / 2 / span 1 / span 2;
-  border: 3px solid rgba(12, 54, 73);
+  border: 3px solid rgba(31, 140, 187, 1);
   border-radius: 20px;
   word-break: normal;
-  background-color: rgba(31, 140, 187, 1);
+  background-color: rgba(12, 54, 73);
 }
 
-.item5 {
+.data5 {
   grid-area: 1 / 4 / span 2 / span 3;
-  border: 3px solid rgba(64, 46, 76);
+  border: 3px solid rgba(136, 98, 162, 1);
   border-radius: 20px;
   word-break: normal;
-  background-color: rgba(136, 98, 162, 1);
+  background-color: rgba(64, 46, 76);
 }
 
-.item6 {
+.data6 {
   grid-area: 5 / 6 / span 1 / span 2;
   border: 3px solid rgba(136, 98, 162, 1);
   border-radius: 20px;
@@ -470,7 +479,15 @@ p {
   background-color: rgba(64, 46, 76);
 }
 
-.item7 {
+.data5:hover,
+.data6:hover {
+  border: 3px solid rgb(234, 222, 206);
+  background-color: rgba(136, 98, 162, 1);
+  transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out,
+    top 0.3s ease-in-out;
+}
+
+.data7 {
   grid-area: 2 / 7 / span 2 / span 2;
   border: 3px solid rgba(31, 140, 187, 1);
   border-radius: 20px;
@@ -478,7 +495,15 @@ p {
   background-color: rgba(12, 54, 73);
 }
 
-.item8 {
+.data4:hover,
+.data7:hover {
+  border: 3px solid rgb(234, 222, 206);
+  background-color: rgba(31, 140, 187, 1);
+  transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out,
+    top 0.3s ease-in-out;
+}
+
+.data8 {
   grid-area: 5 / 8 / span 1 / span 1;
   word-break: normal;
 }
@@ -490,6 +515,125 @@ p {
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
 /* TEST */
 
-/**/
+.grid-graph {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-gap: 5px;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-graph > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.graph1 {
+  grid-area: 1 / 1 / span 4 / span 6;
+  word-break: normal;
+}
+
+.graph2 {
+  grid-area: 1 / 6 / span 2 / span 1;
+}
+
+.graph2 img {
+  width: 150px;
+  height: auto;
+  transform: scaleY(-1);
+}
+
+.graph3 {
+  grid-area: 1 / 7 / span 4 / span 6;
+}
+
+.graph4 {
+  grid-area: 5 / 12 / span 2 / span 1;
+}
+
+.graph4 img {
+  height: 150px;
+  width: auto;
+}
+
+.graph5 {
+  grid-area: 6 / 6 / span 2 / span 6;
+}
+
+.graph6 {
+  grid-area: 7 / 4 / span 1 / span 2;
+}
+
+.graph6 img {
+  width: 150px;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.graph7 {
+  grid-area: 6 / 2 / span 2 / span 2;
+}
+
+#ratings-chart-container {
+  opacity: 0;
+  /* transform: translateY(20px); */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.graph3 canvas {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100%;
+  background: transparent !important;
+}
+
+@media (max-width: 1200px) {
+  .grid-graph {
+    grid-gap: 15px;
+    padding: 15px;
+  }
+
+  .graph3 {
+    grid-area: 1 / 7 / span 4 / span 6;
+  }
+}
+
+@keyframes barRise {
+  from {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.chartjs-tooltip {
+  background-color: rgba(43, 38, 35, 0.95) !important;
+  border: 1px solid rgb(234, 222, 206) !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+  font-family: "Gaegu", sans-serif !important;
+}
+
+/* TEST */
+/* --- Partie Transition --- */
+.transitionable {
+  transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out,
+    top 0.3s ease-in-out;
+}
+
+#pixel {
+  position: absolute;
+  cursor: none;
+  display: none;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
