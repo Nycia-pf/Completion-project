@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Completion Project</title>
     <script>
-      // Rediriger vers la page principale avec l'URL originale
       const path = window.location.pathname;
       const hash = window.location.hash;
 
-      // Extraire le nom de la page de l'URL
       let pageName = "accueil";
       if (path.includes("/")) {
         const parts = path.split("/").filter((p) => p);
         if (parts.length > 0) {
-          // Prendre le dernier segment comme nom de page
           const lastPart = parts[parts.length - 1];
-          // Si c'est une page connue (sans extension)
           const knownPages = [
             "accueil",
             "intro",
@@ -36,7 +32,6 @@
         }
       }
 
-      // Rediriger vers la page principale avec le hash
       sessionStorage.setItem("redirectPage", pageName);
       sessionStorage.setItem("redirectHash", hash);
       window.location.replace("/Projets.html");
