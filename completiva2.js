@@ -142,7 +142,7 @@ const pages = {
             <button class="btn-blue-active" data-page="intro">0</button>
             <button class="btn-blue" data-page="data">1</button>
             <button class="btn-green" data-page="graph">2</button>
-            <button class="btn-green" data-page="finishable">3</button>
+            <button class="btn-green" data-page="division">3</button>
             <button class="btn-violet" data-page="comments">4</button>
             <button class="btn-violet" data-page="people">5</button>
             <button class="btn-pink" data-page="results">6</button>
@@ -224,7 +224,7 @@ const pages = {
             <button class="btn-blue" data-page="intro">0</button>
             <button class="btn-blue-active" data-page="data">1</button>
             <button class="btn-green" data-page="graph">2</button>
-            <button class="btn-green" data-page="finishable">3</button>
+            <button class="btn-green" data-page="division">3</button>
             <button class="btn-violet" data-page="comments">4</button>
             <button class="btn-violet" data-page="people">5</button>
             <button class="btn-pink" data-page="results">6</button>
@@ -249,13 +249,50 @@ const pages = {
             id="intro"
           >
             <div class="grid-data">
-              <div class="data1"><div>Ratings</div></div>
-              <div class="data2">Completion<br />status</div>
-              <div class="data3">Platforms</div>
-              <div class="data4">Game</div>
-              <div class="data5">Summary</div>
-              <div class="data6">Share</div>
-              <div class="data7">Time</div>
+              <div class="data1">
+                <div>
+                  <span style="color: rgb(234, 222, 206)">Ratings</span>
+                  <span style="text-align: left"
+                    ><br />● Average Rating <br />● Number of Ratings<br />●
+                    [0.5-5] Number of Ratings</span
+                  >
+                </div>
+              </div>
+              <div class="data2">
+                <span style="color: rgb(234, 222, 206)">Completion status</span>
+                <span style="text-align: left"
+                  ><br />● Playing <br />● Played <br />● Completed <br />●
+                  Shelved <br />● Abandoned</span
+                >
+              </div>
+              <div class="data3">
+                <span style="color: rgb(234, 222, 206)">Details</span>
+                <span style="text-align: left"><br />● Platforms & Genres</span>
+              </div>
+              <div class="data4">
+                <span style="color: rgb(234, 222, 206)">Game</span>
+                <span style="text-align: left"
+                  ><br />● Name <br />● Developer</span
+                >
+              </div>
+              <div class="data5">
+                <span style="color: rgb(234, 222, 206)">Summary</span>
+                <span style="text-align: left"
+                  ><br />● Summary of the game<br />● Released Date</span
+                >
+              </div>
+              <div class="data6">
+                <span style="color: rgb(234, 222, 206)">Share</span>
+                <span style="text-align: left"
+                  ><br />● Reviews <br />● Likes & Lists</span
+                >
+              </div>
+              <div class="data7">
+                <span style="color: rgb(234, 222, 206)">Time</span>
+                <span style="text-align: left"
+                  ><br />● Average Time <br />● Time to finish / to master</span
+                >
+              </div>
               <div class="data8">
                 <div
                   class="btn-next-blue"
@@ -279,7 +316,7 @@ const pages = {
             <button class="btn-blue" data-page="intro">0</button>
             <button class="btn-blue-active" data-page="data">1</button>
             <button class="btn-green" data-page="graph">2</button>
-            <button class="btn-green" data-page="finishable">3</button>
+            <button class="btn-green" data-page="division">3</button>
             <button class="btn-violet" data-page="comments">4</button>
             <button class="btn-violet" data-page="people">5</button>
             <button class="btn-pink" data-page="results">6</button>
@@ -312,7 +349,7 @@ const pages = {
               >
                 NON-FINISHABLE</span
               >  RATINGS <br /><br />
-              <span style="font-size: 20px">
+              <span style="font-size: 26px">
                 This graph shows how
                 <span style="color: rgba(128, 168, 62)"
                   >finishable games</span
@@ -350,7 +387,7 @@ const pages = {
           </div>
 
           <div class="graph5">
-            <div style="text-align: left; font-size: 20px">
+            <div style="text-align: left; font-size: 24px">
               <span style="color: rgba(128, 168, 62)">●</span> Finishable
               games peak at
               <span style="color: rgba(128, 168, 62); font-weight: bold"
@@ -375,7 +412,7 @@ const pages = {
           <div class="graph7" style="padding: 10px 0 0 0">
             <div
                 class="btn-next-green"
-                data-page="finishable"
+                data-page="division"
                 style="font-family: 'Bungee Shade', sans-serif"
               >
                 Split data
@@ -393,7 +430,7 @@ const pages = {
           <button class="btn-blue" data-page="intro">0</button>
           <button class="btn-blue" data-page="data">1</button>
           <button class="btn-green-active" data-page="graph">2</button>
-          <button class="btn-green" data-page="finishable">3</button>
+          <button class="btn-green" data-page="division">3</button>
           <button class="btn-violet" data-page="comments">4</button>
           <button class="btn-violet" data-page="people">5</button>
           <button class="btn-pink" data-page="results">6</button>
@@ -402,21 +439,105 @@ const pages = {
     </div>
   </div>
   `,
-  finishable: `
+  division: `
     <div class="page active">
     <div class="main-container">
     <main class="content">
-      <h1>Finishable ?</h1>
-      <p>Page DOUBLE : Explications + Data </p>
-      <p>Page 1 : DIVISION <br/>
-      - Diviser les données = Pourquoi ? quoi ? <br/><br/>
-      - bouton "Calculate" (.btn-next)<br/>
-      - Barre de complétion 47%<br/><br/>
-      Page 2 : RATIO M-F <br/>
-      - Qu'est-ce que le ratio M-F ? <br/>
-      - expliquer qu'on a besoin de données plus précises sur la masterisation <br/>
-      - bouton "Load more Data" (.btn-next)<br/>
-      - Barre de complétion 58%<br/><br/>
+      <div
+            class="box transitionable"
+            style="
+              opacity: 1;
+              display: block;
+              width: 90%;
+              height: 96%;
+              text-align: center;
+            "
+            id="intro"
+          >
+            <div class="grid-div" style="padding: 20 0 0 0">
+              <div class="div1"><p>By dividing our data, we focus on games that we can <span style = "text-decoration: underline; text-decoration-color : rgba(128, 168, 62, 1); text-decoration-style : dashed">actually complete</span>.</p></div>
+              <div class="div2">
+  <div class="games-mini-visualization">
+    <div class="games-title">
+      <h3>Games Library</h3>
+    </div>
+    
+    <div class="games-visual">
+      <div class="games-dots">
+        <div class="dots-container" id="games-dots"></div>
+      </div>
+      
+      <div class="games-stats-mini">
+        <div class="stat-mini finishable">
+          <div class="stat-dot" style="background: rgba(128, 168, 62, 1)"></div>
+          <div class="stat-text">
+            <span class="stat-number">261</span>
+            <span class="stat-label">Finishable</span>
+            <span class="stat-percent">2.5%</span>
+          </div>
+        </div>
+        
+        <div class="stat-mini non-finishable">
+          <div class="stat-dot" style="background: rgb(64, 85, 31)"></div>
+          <div class="stat-text">
+            <span class="stat-number">10,306</span>
+            <span class="stat-label">Non-finishable</span>
+            <span class="stat-percent">97.5%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <span style="color : rgb(43, 38, 35)">OOOOOOOO</span>
+  <div class="btn-next-green" data-page="ratio_MF" style="font-family: 'Bungee Shade', sans-serif">
+    So...
+    <div class="rarr"></div>
+  </div>
+  <img style="width: 150px; height: auto;" src="flèche3.png" alt="Flèche directionnelle" />
+</div>
+</div>
+      <div class="div3">
+  <div class="ratio-simple">
+    <div class="ratio-context">
+      We also decided to create a <span style = "text-decoration: underline; text-decoration-color : rgba(128, 168, 62, 1); text-decoration-style : dashed">new variable</span> to add more depth to our analysis.
+                <br>Let's introduce the <span style = "color : rgba(128, 168, 62, 1)">RATIO M-F</span> (between the time needed to finish a game and the time to master it ):
+    </div>
+    
+    <div class="formula-container">
+      <div class="formula-wrapper">
+        <div class="formula-label">Master-Finish Ratio</div>
+        <div class="formula-equation">
+          <span class="variable">ratio M-F</span>
+          <span class="operator">=</span>
+          <div class="division">
+            <div class="top">T<sub>master</sub>- T<sub>finish</sub></div>
+            <div class="line"></div>
+            <div class="bottom">T<sub>finish</sub></div>
+          </div>
+        </div>
+        <div class="formula-description">
+          Where <span class="highlight">T<sub>master</sub></span> = time to master<br>
+          and <span class="highlight">T<sub>finish</sub></span> = time to finish
+        </div>
+      </div>
+    </div>
+    
+    <div class="ratio-insights">
+      <div class="insight">
+        <div class="insight-marker"></div>
+        <div class="insight-content">
+          <strong>Higher ratio</strong> indicates games with extensive post-completion content
+        </div>
+        <br><div class="insight-marker"></div>
+        <div class="insight-content">
+          <strong>Lower ratio</strong> suggests mastery is achieved quickly after finishing it
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     </main>
     <aside class="progress-bar">
     <div class="progress-container">
@@ -437,20 +558,94 @@ const pages = {
     </div>
     </div>
   `,
-  finishable_bis: `
+  ratio_MF: `
     <div class="page active">
-    <div class="main-container">
-    <main class="content">
-      <h1>Finishable_2 ?</h1>
-      Page 2 : RATIO M-F <br/>
-      - Qu'est-ce que le ratio M-F ? <br/>
-      - expliquer qu'on a besoin de données plus précises sur la masterisation <br/>
-      - bouton "Load more Data" (.btn-next)<br/>
-      - Barre de complétion 58%<br/><br/>
-    </main>
+      <div class="main-container">
+        <main class="content">
+          <div class="simple-ratio-container">
+            <div class="simple-text-section">
+              <div class="simple-content">
+                <p>
+                  Our first intuition about the time spent to master a game was
+                  that
+                  <span style="color: rgba(128, 168, 62, 1)"
+                    >not spending enough</span
+                  >
+                  additional time didn't convey any
+                  <span
+                    style="
+                      text-decoration: underline;
+                      text-decoration-style: dashed;
+                      text-decoration-color: rgba(128, 168, 62, 1);
+                    "
+                    >fulfilling feeling</span
+                  >, but spending
+                  <span style="color: rgba(128, 168, 62, 1)">too much</span>
+                  time might create
+                  <span
+                    style="
+                      text-decoration: underline;
+                      text-decoration-style: dashed;
+                      text-decoration-color: rgba(128, 168, 62, 1);
+                    "
+                    >frustration</span
+                  >
+                  upon completion.
+                </p>
+                <br />
+                <p style="text-align: right">
+                  Now we have EVERY INGREDIENTS to answer our question : <br />
+                  do
+                  <span
+                    style="
+                      text-decoration: underline;
+                      text-decoration-style: dashed;
+                      text-decoration-color: rgba(128, 168, 62, 1);
+                    "
+                    >people</span
+                  >
+                  who mastered a game prefer it? <br /><br />Wait...
+                  <span style="color: rgba(128, 168, 62, 1)">People</span> ?
+                  <br />
+                  Maybe we'll need more data...
+                </p>
+              </div>
+            </div>
+            <div class="simple-chart-section">
+              <div class="simple-chart-container">
+                <canvas id="simple-ratio-chart"></canvas>
+              </div>
+              <div style="text-align: center; display: align-flex">
+                <br />
+                <br />
+                <img
+                  style="
+                    width: 150px;
+                    height: auto;
+                    transform: scaleY(-1);
+                    translate: scaleY(3);
+                  "
+                  src="flèche1.png"
+                  alt="Flèche directionnelle"
+                />
+                <div
+                  class="btn-next-green"
+                  data-page="comments"
+                  style="
+                    font-family: 'Bungee Shade', sans-serif;
+                    display: right;
+                  "
+                >
+                  Load More :)
+                  <div class="rarr"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
     <aside class="progress-bar">
     <div class="progress-container">
-        <div class="progress" style="height: 53%;"></div>
+        <div class="progress" style="height: 42%;"></div>
       </div>
     </aside>
       <nav class="bottom-nav">
@@ -458,7 +653,7 @@ const pages = {
         <button class="btn-blue" data-page="intro">0</button>
         <button class="btn-blue" data-page="data">1</button>
         <button class="btn-green" data-page="graph">2</button>
-        <button class="btn-green-active" data-page="finishable">3</button>
+        <button class="btn-green-active" data-page="division">3</button>
         <button class="btn-violet" data-page="comments">4</button>
         <button class="btn-violet" data-page="people">5</button>
         <button class="btn-pink" data-page="results">6</button>
@@ -485,7 +680,7 @@ const pages = {
         <button class="btn-blue" data-page="intro">0</button>
         <button class="btn-blue" data-page="data">1</button>
         <button class="btn-green" data-page="graph">2</button>
-        <button class="btn-green" data-page="finishable">3</button>
+        <button class="btn-green" data-page="division">3</button>
         <button class="btn-violet-active" data-page="comments">4</button>
         <button class="btn-violet" data-page="people">5</button>
         <button class="btn-pink" data-page="results">6</button>
@@ -512,7 +707,7 @@ const pages = {
         <button class="btn-blue" data-page="intro">0</button>
         <button class="btn-blue" data-page="data">1</button>
         <button class="btn-green" data-page="graph">2</button>
-        <button class="btn-green" data-page="finishable">3</button>
+        <button class="btn-green" data-page="division">3</button>
         <button class="btn-violet" data-page="comments">4</button>
         <button class="btn-violet-active" data-page="people">5</button>
         <button class="btn-pink" data-page="results">6</button>
@@ -539,7 +734,7 @@ const pages = {
         <button class="btn-blue" data-page="intro">0</button>
         <button class="btn-blue" data-page="data">1</button>
         <button class="btn-green" data-page="graph">2</button>
-        <button class="btn-green" data-page="finishable">3</button>
+        <button class="btn-green" data-page="division">3</button>
         <button class="btn-violet" data-page="comments">4</button>
         <button class="btn-violet" data-page="people">5</button>
         <button class="btn-pink-active" data-page="results">6</button>
@@ -566,7 +761,7 @@ const pages = {
         <button class="btn-blue" data-page="intro">0</button>
         <button class="btn-blue" data-page="data">1</button>
         <button class="btn-green" data-page="graph">2</button>
-        <button class="btn-green" data-page="finishable">3</button>
+        <button class="btn-green" data-page="division">3</button>
         <button class="btn-violet" data-page="comments">4</button>
         <button class="btn-violet" data-page="people">5</button>
         <button class="btn-pink" data-page="results">6</button>
@@ -599,6 +794,11 @@ function navigateTo(pageName) {
       if (typeof Chart !== "undefined") {
         initializeChart();
       }
+    }, 50);
+  }
+  if (pageName === "division") {
+    setTimeout(() => {
+      generateMiniDots();
     }, 50);
   }
 }
@@ -641,14 +841,12 @@ window.addEventListener("hashchange", () => {
 
 // ====== FONCTION POUR LE GRAPHIQUE ======
 function initializeChart() {
-  // Vérifier que le canvas existe
   const canvas = document.getElementById("ratings-chart");
   if (!canvas) {
     console.error("Canvas not found for chart");
     return;
   }
 
-  // Vérifier que Chart est disponible
   if (typeof Chart === "undefined") {
     console.error("Chart.js is not loaded");
     return;
@@ -656,7 +854,6 @@ function initializeChart() {
 
   const ctx = canvas.getContext("2d");
 
-  // Données du graphique
   const ratingsData = {
     labels: ["0.5", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0", "4.5"],
     datasets: [
@@ -774,19 +971,183 @@ function initializeChart() {
     },
   };
 
-  // Créer le graphique
   const ratingsChart = new Chart(ctx, chartConfig);
 
-  // Animation d'entrée
   const container = document.querySelector("#ratings-chart-container");
   if (container) {
     container.style.opacity = "1";
     container.style.transform = "translateY(0)";
   }
 
-  // Retourner l'instance pour référence
   return ratingsChart;
 }
 
-// // On verra plus tard :)
-// TRANSITIIIOOOOOONN !!
+// --- Division ---
+function generateMiniDots() {
+  const container = document.getElementById("games-dots");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  const finishableCount = 8;
+  const nonFinishableCount = 92;
+
+  for (let i = 0; i < nonFinishableCount; i++) {
+    const dot = document.createElement("div");
+    dot.className = "game-dot-mini non-finishable";
+    dot.style.animationDelay = `${i * 0.02}s`;
+    container.appendChild(dot);
+  }
+
+  for (let i = 0; i < finishableCount; i++) {
+    const dot = document.createElement("div");
+    dot.className = "game-dot-mini finishable";
+    dot.style.animationDelay = `${(nonFinishableCount + i) * 0.02}s`;
+    container.appendChild(dot);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", generateMiniDots);
+
+// Ratio_M-F
+const rawData = [
+  { ratio: 0.2, count: 44, leg: "20%" },
+  { ratio: 0.5, count: 36, leg: "50%" },
+  { ratio: 0.3, count: 36, leg: "30%" },
+  { ratio: 0.0, count: 36, leg: "0%" },
+  { ratio: 0.4, count: 35, leg: "40%" },
+  { ratio: 0.6, count: 25, leg: "60%" },
+  { ratio: 0.7, count: 14, leg: "70%" },
+  { ratio: 0.8, count: 13, leg: "80%" },
+  { ratio: 0.1, count: 12, leg: "10%" },
+  { ratio: 0.9, count: 3, leg: "90%" },
+  { ratio: -0.1, count: 2, leg: "-10%" },
+  { ratio: -0.2, count: 2, leg: "-20%" },
+  { ratio: -0.4, count: 1, leg: "-40%" },
+  { ratio: -12.0, count: 1, leg: "Outlier" },
+  { ratio: -0.3, count: 1, leg: "-30%" },
+];
+
+const sortedData = [...rawData].sort((a, b) => a.ratio - b.ratio);
+const labels = sortedData.map((d) =>
+  d.ratio === -12.0 ? "Outlier" : d.leg.toString()
+);
+const data = sortedData.map((d) => d.count);
+const totalGames = data.reduce((a, b) => a + b, 0);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const ctx = document.getElementById("simple-ratio-chart").getContext("2d");
+
+  Chart.defaults.font.family = "'Gaegu', sans-serif";
+  Chart.defaults.font.size = 14;
+
+  const chart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: "Number of Games",
+          data: data,
+          backgroundColor: sortedData.map((d) => {
+            if (d.ratio < 0) return "rgba(64, 85, 31, 0.6)";
+            if (d.ratio === 0) return "rgba(234, 222, 206, 0.6)";
+            return "rgba(128, 168, 62, 0.6)";
+          }),
+          borderColor: sortedData.map((d) => {
+            if (d.ratio < 0) return "rgba(64, 85, 31, 1)";
+            if (d.ratio === 0) return "rgba(234, 222, 206, 1)";
+            return "rgba(31, 140, 187, 1)";
+          }),
+          borderWidth: 1.5,
+          borderRadius: 3,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      animation: {
+        duration: 1000,
+        easing: "easeOutQuart",
+      },
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          backgroundColor: "rgba(43, 38, 35, 0.95)",
+          titleColor: "rgb(234, 222, 206)",
+          bodyColor: "rgb(234, 222, 206)",
+          borderColor: "rgba(128, 168, 62, 0.8)",
+          borderWidth: 1,
+          titleFont: {
+            family: "'Gaegu', sans-serif",
+            size: 14,
+          },
+          bodyFont: {
+            family: "'Gaegu', sans-serif",
+            size: 14,
+          },
+          callbacks: {
+            label: (context) => {
+              const value = context.raw;
+              const percent = ((value / totalGames) * 100).toFixed(1);
+              return `${value} games (${percent}%)`;
+            },
+          },
+        },
+      },
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: "Ratio M-F Value",
+            color: "rgba(234, 222, 206, 0.9)",
+            font: {
+              family: "'Gaegu', sans-serif",
+              size: 16,
+              weight: "bold",
+            },
+          },
+          ticks: {
+            color: "rgba(234, 222, 206, 0.8)",
+            font: {
+              family: "'Gaegu', sans-serif",
+              size: 13,
+            },
+          },
+          grid: {
+            color: "rgba(234, 222, 206, 0.1)",
+            drawBorder: false,
+          },
+        },
+        y: {
+          title: {
+            display: true,
+            text: "Number of Games",
+            color: "rgba(234, 222, 206, 0.9)",
+            font: {
+              family: "'Gaegu', sans-serif",
+              size: 16,
+              weight: "bold",
+            },
+          },
+          ticks: {
+            color: "rgba(234, 222, 206, 0.8)",
+            font: {
+              family: "'Gaegu', sans-serif",
+              size: 13,
+            },
+            stepSize: 10,
+          },
+          grid: {
+            color: "rgba(234, 222, 206, 0.1)",
+            drawBorder: false,
+          },
+          beginAtZero: true,
+        },
+      },
+    },
+  });
+});
