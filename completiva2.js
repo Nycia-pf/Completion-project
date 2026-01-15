@@ -667,8 +667,11 @@ const pages = {
     <div class="main-container">
     <main class="content">
       <h1>Comments</h1>
-      <p>Bienvenue sur mon site SPA !</p>
-      <p>Ce site change de contenu sans recharger la page.</p>
+      <p>Elements : </p>
+      <p>- box avec les data descriptions<br>
+      - bouton pour charger un exemple au hasard<br>
+      - bouton next page violet <br>
+      - barre de complétion = 70 %</p>
     </main>
     <aside class="progress-bar">
     <div class="progress-container">
@@ -694,8 +697,11 @@ const pages = {
     <div class="main-container">
     <main class="content">
       <h1>People</h1>
-      <p>Bienvenue sur mon site SPA !</p>
-      <p>Ce site change de contenu sans recharger la page.</p>
+      <p>Elements : </p>
+      <p>- texte qui explique le test sur le ratio<br>
+      - table de régression P2 et 3 (with control)<br>
+      - bouton next page violet <br>
+      - barre de complétion = 84 %</p>
     </main>
     <aside class="progress-bar">
     <div class="progress-container">
@@ -720,9 +726,13 @@ const pages = {
     <div class="page active">
     <div class="main-container">
     <main class="content">
-      <h1>Results</h1>
-      <p>Bienvenue sur mon site SPA !</p>
-      <p>Ce site change de contenu sans recharger la page.</p>
+      <h1>Results ! :O</h1>
+      <p>Elements : </p>
+      <p>- Expliquer l'interprétation des résultats<br>
+      - Paragraphe sur le fait que le principal c'est de jouer de la façon qui nous fait plaisir<br>
+      - Parler des limites et de la suite ? <br>
+      - barre de complétion = 100% ! :D</p> <br>
+      - bouton vers les ressources annexes
     </main>
     <aside class="progress-bar">
     <div class="progress-container">
@@ -747,9 +757,12 @@ const pages = {
     <div class="page active">
     <div class="main-container">
     <main class="content">
-      <h1>Bonus (112% ??)</h1>
-      <p>Bienvenue sur mon site SPA !</p>
-      <p>Ce site change de contenu sans recharger la page.</p>
+      <h1>Bibliography </h1>
+      <p>Elements : </p>
+      <p>- Uneuh biblio aux petits oignons <br>
+      - Pour me contacter <br>
+      - Si vous êtes curieux sur les data sciences, checkez ses autres sites (on fait goûter les copains)<br>
+      - barre de complétion = 112% ?! </p> <br>
     </main>
     <aside class="progress-bar">
     <div class="progress-container">
@@ -796,11 +809,13 @@ function navigateTo(pageName) {
       }
     }, 50);
   }
+
   if (pageName === "division") {
     setTimeout(() => {
       generateMiniDots();
     }, 50);
   }
+
   if (pageName === "ratio_MF") {
     setTimeout(() => {
       if (typeof Chart !== "undefined") {
@@ -1014,41 +1029,50 @@ function generateMiniDots() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", generateMiniDots);
-
 // Ratio_M-F
-const rawData = [
-  { ratio: 0.2, count: 44, leg: "20%" },
-  { ratio: 0.5, count: 36, leg: "50%" },
-  { ratio: 0.3, count: 36, leg: "30%" },
-  { ratio: 0.0, count: 36, leg: "0%" },
-  { ratio: 0.4, count: 35, leg: "40%" },
-  { ratio: 0.6, count: 25, leg: "60%" },
-  { ratio: 0.7, count: 14, leg: "70%" },
-  { ratio: 0.8, count: 13, leg: "80%" },
-  { ratio: 0.1, count: 12, leg: "10%" },
-  { ratio: 0.9, count: 3, leg: "90%" },
-  { ratio: -0.1, count: 2, leg: "-10%" },
-  { ratio: -0.2, count: 2, leg: "-20%" },
-  { ratio: -0.4, count: 1, leg: "-40%" },
-  { ratio: -12.0, count: 1, leg: "Outlier" },
-  { ratio: -0.3, count: 1, leg: "-30%" },
-];
+function initializeSimpleRatioChart() {
+  const canvas = document.getElementById("simple-ratio-chart");
+  if (!canvas) {
+    console.error("Canvas not found for simple ratio chart");
+    return;
+  }
 
-const sortedData = [...rawData].sort((a, b) => a.ratio - b.ratio);
-const labels = sortedData.map((d) =>
-  d.ratio === -12.0 ? "Outlier" : d.leg.toString()
-);
-const data = sortedData.map((d) => d.count);
-const totalGames = data.reduce((a, b) => a + b, 0);
+  if (typeof Chart === "undefined") {
+    console.error("Chart.js is not loaded");
+    return;
+  }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const ctx = document.getElementById("simple-ratio-chart").getContext("2d");
+  const ctx = canvas.getContext("2d");
+
+  const rawData = [
+    { ratio: 0.2, count: 44, leg: "20%" },
+    { ratio: 0.5, count: 36, leg: "50%" },
+    { ratio: 0.3, count: 36, leg: "30%" },
+    { ratio: 0.0, count: 36, leg: "0%" },
+    { ratio: 0.4, count: 35, leg: "40%" },
+    { ratio: 0.6, count: 25, leg: "60%" },
+    { ratio: 0.7, count: 14, leg: "70%" },
+    { ratio: 0.8, count: 13, leg: "80%" },
+    { ratio: 0.1, count: 12, leg: "10%" },
+    { ratio: 0.9, count: 3, leg: "90%" },
+    { ratio: -0.1, count: 2, leg: "-10%" },
+    { ratio: -0.2, count: 2, leg: "-20%" },
+    { ratio: -0.4, count: 1, leg: "-40%" },
+    { ratio: -12.0, count: 1, leg: "Outlier" },
+    { ratio: -0.3, count: 1, leg: "-30%" },
+  ];
+
+  const sortedData = [...rawData].sort((a, b) => a.ratio - b.ratio);
+  const labels = sortedData.map((d) =>
+    d.ratio === -12.0 ? "Outlier" : d.leg.toString()
+  );
+  const data = sortedData.map((d) => d.count);
+  const totalGames = data.reduce((a, b) => a + b, 0);
 
   Chart.defaults.font.family = "'Gaegu', sans-serif";
   Chart.defaults.font.size = 14;
 
-  const chart = new Chart(ctx, {
+  return new Chart(ctx, {
     type: "bar",
     data: {
       labels: labels,
@@ -1064,7 +1088,7 @@ document.addEventListener("DOMContentLoaded", function () {
           borderColor: sortedData.map((d) => {
             if (d.ratio < 0) return "rgba(64, 85, 31, 1)";
             if (d.ratio === 0) return "rgba(234, 222, 206, 1)";
-            return "rgba(31, 140, 187, 1)";
+            return "rgba(128, 168, 62, 1)";
           }),
           borderWidth: 1.5,
           borderRadius: 3,
@@ -1157,4 +1181,4 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
-});
+}
