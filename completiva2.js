@@ -801,6 +801,13 @@ function navigateTo(pageName) {
       generateMiniDots();
     }, 50);
   }
+  if (pageName === "ratio_MF") {
+    setTimeout(() => {
+      if (typeof Chart !== "undefined") {
+        initializeSimpleRatioChart();
+      }
+    }, 50);
+  }
 }
 
 function handleButtonClick(event) {
