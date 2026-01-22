@@ -25,17 +25,17 @@ const pages = {
               <br />
               <span
                 style="
-                  font-size: 100px;
+                  font-size: 6.25rem;
                   line-height: 80px;
                   position: relative;
-                  top: -15px;
+                  top: -0.9375rem;
                   display: block;
                 "
                 >VIDEO GAMES</span
               >
             </div>
 
-            <div style="color: #6f6767; font-size: 20px">
+            <div style="color: #6f6767; font-size: 1.25rem">
               a study by Nycia PRADEL-FERNANDES, january 2026
             </div>
             <br />
@@ -45,7 +45,7 @@ const pages = {
                 left: 180px;
                 top: 205px;
                 width: 600px;
-                height: 100px;
+                height: 6.25rem;
                 text-align: center;
               "
             >
@@ -330,11 +330,11 @@ const pages = {
       <main class="data-box">
         <div class="grid-graph">
           <div class="graph1">
-            <div style="padding: 10px ; text-align: left">
+            <div style="padding: 0.625rem ; text-align: left">
               <span
                 style="
                   font-family: 'Bungee Shade', sans-serif;
-                  font-size: 24px;
+                  font-size: 1.5rem;
                   color: rgba(128, 168, 62);
                 "
               >
@@ -342,7 +342,7 @@ const pages = {
               > vs<br><span
                 style="
                   font-family: 'Bungee Shade', sans-serif;
-                  font-size: 24px;
+                  font-size: 1.5rem;
                   color: rgba(64, 85, 31);
                 "
               >
@@ -386,7 +386,7 @@ const pages = {
           </div>
 
           <div class="graph5">
-            <div style="text-align: left; font-size: 24px">
+            <div style="text-align: left; font-size: 1.5rem">
               <span style="color: rgba(128, 168, 62)">●</span> Finishable
               games peak at
               <span style="color: rgba(128, 168, 62); font-weight: bold"
@@ -408,7 +408,7 @@ const pages = {
             <img src="flèche1.png" />
           </div>
 
-          <div class="graph7" style="padding: 10px 0 0 0">
+          <div class="graph7" style="padding: 0.625rem 0 0 0">
             <div
                 class="btn-next-green"
                 data-page="division"
@@ -488,7 +488,7 @@ const pages = {
     </div>
   </div>
   <br>
-  <div style="display: flex; align-items: center; gap: 15px;">
+  <div style="display: flex; align-items: center; gap: 0.9375rem;">
     <span style="color : rgb(43, 38, 35)">OOOOOOOO</span>
   <div class="btn-next-green" data-page="ratio_MF" style="font-family: 'Bungee Shade', sans-serif">
     So...
@@ -563,7 +563,7 @@ const pages = {
         <main class="data-box">
           <div class="grid-graph">
             <div class="graph1">
-              <div style="padding: 10px; text-align: right">
+              <div style="padding: 0.625rem; text-align: right">
                 <p>
                   Our first intuition about the time spent to master a game was
                   that
@@ -629,7 +629,7 @@ const pages = {
 
             <div class="graph6"></div>
 
-            <div class="graph8" style="padding: 10px 0 0 0">
+            <div class="graph8" style="padding: 0.625rem 0 0 0">
               <p style="text-align: right">
                 Now we have EVERY INGREDIENTS to answer our question : <br />
                 do
@@ -689,8 +689,8 @@ const pages = {
                   style="
                     color: rgba(136, 98, 162, 1);
                     font-family: 'Bungee Shade', sans-serif;
-                    font-size: 36px;
-                    margin-bottom: 20px;
+                    font-size: 2.25rem;
+                    margin-bottom: 1.25rem;
                   "
                 >
                   PLAYER REVIEWS
@@ -704,7 +704,7 @@ const pages = {
                 >
                   We scraped the reviews of the 100 first finishable games in
                   our dataset.<br />
-                  <span style="color: #6f6767; font-size: 20px">
+                  <span style="color: #6f6767; font-size: 1.25rem">
                     Yeah! An access to what players REALLY think!
                   </span>
                 </div>
@@ -723,7 +723,7 @@ const pages = {
                   "
                 >
                   <div
-                    style="font-size: 20px; color: #6f6767; margin-bottom: 5px"
+                    style="font-size: 1.25rem; color: #6f6767; margin-bottom: 5px"
                   >
                     MASTERED
                   </div>
@@ -731,7 +731,7 @@ const pages = {
                     style="
                       font-size: 28px;
                       font-weight: bold;
-                      padding: 5px 15px;
+                      padding: 5px 0.9375rem;
                       border-radius: 8px;
                       background: rgba(136, 98, 162, 0.1);
                       min-width: 80px;
@@ -754,7 +754,7 @@ const pages = {
                   "
                 >
                   <div
-                    style="font-size: 20px; color: #6f6767; margin-bottom: 5px"
+                    style="font-size: 1.25rem; color: #6f6767; margin-bottom: 5px"
                   >
                     STATUS
                   </div>
@@ -765,7 +765,7 @@ const pages = {
                       padding: 5px 12px;
                       border-radius: 8px;
                       background: rgba(136, 98, 162, 0.2);
-                      min-width: 100px;
+                      min-width: 6.25rem;
                     "
                     id="comment-status"
                   ></div>
@@ -801,7 +801,7 @@ const pages = {
                     flex-direction: column;
                   "
                 >
-                <div id="review-counter" style="font-size: 18px; color: #6f6767; margin-bottom: 10px; text-align: right;">#0</div>
+                <div id="review-counter" style="font-size: 18px; color: #6f6767; margin-bottom: 0.625rem; text-align: right;">#0</div>
                   <div
                     id="comment-placeholder"
                     style="
@@ -812,7 +812,7 @@ const pages = {
                       height: 100%;
                       text-align: center;
                       color: #6f6767;
-                      font-size: 24px;
+                      font-size: 1.5rem;
                       line-height: 1.5;
                     "
                   >
@@ -829,7 +829,7 @@ const pages = {
                     id="comment-content"
                     style="display: none; flex-direction: column; height: 100%"
                   >
-                    <div style="margin-bottom: 15px">
+                    <div style="margin-bottom: 0.9375rem">
                       <div
                         style="
                           font-size: 22px;
@@ -844,7 +844,7 @@ const pages = {
                         style="
                           display: flex;
                           justify-content: space-between;
-                          font-size: 20px;
+                          font-size: 1.25rem;
                           color: #6f6767;
                         "
                       >
@@ -856,8 +856,8 @@ const pages = {
                       style="
                         flex-grow: 1;
                         overflow-y: auto;
-                        padding-right: 10px;
-                        padding-bottom: 20px;
+                        padding-right: 0.625rem;
+                        padding-bottom: 1.25rem;
                       "
                     >
                       <div
@@ -880,7 +880,7 @@ const pages = {
                     height: 100%;
                   "
                 >
-                  <div style="font-size: 20px; margin-bottom: 5px">RATING</div>
+                  <div style="font-size: 1.25rem; margin-bottom: 5px">RATING</div>
                   <div
                     style="
                       font-size: 28px;
@@ -905,19 +905,19 @@ const pages = {
                     height: 100%;
                     width: 100%;
                     cursor: pointer;
-                    padding: 10px;
+                    padding: 0.625rem;
                   "
                 >
                   <span
                     style="
                       font-family: 'Bungee Shade', sans-serif;
-                      font-size: 20px;
+                      font-size: 1.25rem;
                       text-align: center;
                     "
                   >
                     Let's<br />ANALYZE PEOPLE !
                   </span>
-                  <div class="rarr" style="margin-top: 10px"></div>
+                  <div class="rarr" style="margin-top: 0.625rem"></div>
                 </div>
               </div>
 
@@ -1077,7 +1077,7 @@ const pages = {
   align-items: center;
   position: relative;
   width: 100%;
-  padding: 20px 0;
+  padding: 1.25rem 0;
   margin-bottom: 30px;
 ">
   
@@ -1090,7 +1090,7 @@ const pages = {
     <h2 style="
       color: rgba(136, 98, 162, 0.7);
       font-family: 'Bungee Shade', sans-serif;
-      font-size: 36px;
+      font-size: 2.25rem;
       margin: 0;
       white-space: nowrap;
     ">
@@ -1109,8 +1109,8 @@ const pages = {
       data-page="results"
       style="
         font-family: 'Bungee Shade', sans-serif;
-        padding: 12px 25px;
-        font-size: 20px;
+        padding: 12px 1.5625rem;
+        font-size: 1.25rem;
       "
     >
       100%...
@@ -1182,8 +1182,8 @@ const pages = {
         <div style="
           text-align: center; 
           width: 80%;
-          margin: 10px auto;
-          padding: 15px;
+          margin: 0.625rem auto;
+          padding: 0.9375rem;
         ">
           And if we dive deeper in the preferences of mastered comments, we find the <span style="color:rgba(136, 98, 162, 1)">same tendency</span> as in the 
           the previous "global" results.<br>When a game has more additional time, 
@@ -1198,26 +1198,26 @@ const pages = {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 1.25rem;
     ">
       
       <div style="
         text-align: center; 
-        width: min(90%, 850px);
+        width: min(90%, 53.125rem);
         margin: 0 auto;
-        padding: 10px;
+        padding: 0.625rem;
         font-size: 22px;
       ">
         Here the mastery effect is <span style="color:rgba(136, 98, 162, 1)">significative</span>.<br> But even BETTER !<br>
         It's <span style="color:rgba(136, 98, 162, 1)">independent</span> from the average rating.<br>
-        <span style="color: #6f6767; font-size: 20px">-- it means that a higher average rating of a game doesn't influence the results --</span><br>
+        <span style="color: #6f6767; font-size: 1.25rem">-- it means that a higher average rating of a game doesn't influence the results --</span><br>
         People (on Backloggd) really like <span style="color:rgba(136, 98, 162, 1)">MASTERING</span> a game, not only play a good one !!
       </div>
       <br>
       <div style="
         font-size: 22px; 
         text-align: left;
-        width: min(90%, 850px);
+        width: min(90%, 53.125rem);
         margin: 0 auto;
       ">
         <span style="color:rgba(136, 98, 162, 0.7); text-transform:uppercase">B) Among mastered comments only</span>
@@ -1309,7 +1309,7 @@ const pages = {
             id="intro"
           >
             <br /><br />
-            <span style="font-size: 36px">
+            <span style="font-size: 2.25rem">
               FINALLY, its time for conclusion !</span
             ><br />
             <br />We now know that people that
@@ -1389,65 +1389,81 @@ const pages = {
   bonus: `
     <div class="page active">
     <div class="main-container">
-    <main class="content">
-    <br>
-    <br>
-    <br>
-      <div
-            class="box"
-            id="title"
+    <main class="data-box">
+          <div
+            class="box transitionable"
             style="
-              left: 180px;
-              top: 80px;
-              width: 600px;
-              height: 230px;
+              opacity: 1;
+              display: block;
+              width: 90%;
+              height: 96%;
               text-align: center;
             "
           >
-            <div style="font-size: 30px">
-              <div style="width: 100%; overflow: visible; text-align: center">
-                <span class="completion-title">Congrats !</span>
+            <div class="grid-thanks">
+              <div class="thanks1">
+                <div>
+                  <span style="color: rgb(234, 222, 206)"
+                    >CONGRATULATIONS !</span
+                  >
+                  <span style="text-align: left"
+                    ><br />for (really this time) reaching the end of the
+                    website.<br /><span style="font-size: 18px"
+                      >Take your time to navigate through this page :)</span
+                    ><br
+                  /></span>
+                </div>
               </div>
-
-              <br />
-              <span style="position: relative; top: -11px">you found a</span>
-              <br />
-              <span
-                style="
-                  font-size: 60px;
-                  line-height: 80px;
-                  position: relative;
-                  top: -15px;
-                  display: block;
-                "
-                >NOT ACHIEVED PAGE</span
-              >
-            </div>
-
-            <div style="color: #6f6767; font-size: 20px">
-              but something told me that waiting might be worth your time...<br>
-              additional one IS better for happiness ! (well, in gaming at least)
-            </div>
-            <br />
-            <div
-              class="box"
-              style="
-                left: 180px;
-                top: 205px;
-                width: 600px;
-                height: 100px;
-                text-align: center;
-              "
-            >
-              <div class="btn-start" data-page="intro">
-                Turn<br /><span style="font-family: 'Gaegu', serif"
-                  >back</span
+              <div class="thanks2">
+                <span style="color: rgb(234, 222, 206)">ABOUT-ME</span>
+                <span style="text-align: left"
+                  ><br />Helloo !! I'm Nycia, a french student in data-science
+                  (*°^°*)<br />
+                  You can contact me via
+                  <a href="mailto:nycia.pradelfernandes@psl.eu">this email</a>
+                  for further question or remarks. Don't hesitate to reach out !
+                  I'll be pleased to answer :)</span
                 >
-                <div class="rarr"></div>
+              </div>
+              <div class="thanks3">
+                <span style="color: rgb(234, 222, 206)">This Project...</span>
+                <span style="text-align: left"
+                  ><br />This project was realized in the span of a data science
+                  course.<br />You can check the whole analysis directly on my
+                  <a
+                    href="https://github.com/Nycia-pf/Completion-project/tree/main/Analysis%20part"
+                    >GitHub</a
+                  ></span
+                >
+              </div>
+              <div class="thanks5">
+                <span style="color: rgb(234, 222, 206)">More project ?</span>
+                <span style="text-align: left"
+                  ><br />Interested in data science ?<br />Feel free to check
+                  this awesome projects ! <br />● Find friends :O</span
+                >
+              </div>
+              <div class="thanks6">
+                <span style="color: rgb(234, 222, 206)">Special Thanks</span>
+                <span style="text-align: left"
+                  ><br />To be completed... but more additional times will make
+                  you happier right ?</span
+                >
+              </div>
+              <div class="thanks7">
+                <span style="color: rgb(234, 222, 206)">Retry ?</span>
+                <span style="text-align: left"
+                  ><br /><span style="font-size: 22px"
+                    >Want to retry the experience ? You just have to reload the
+                    page ! <br /></span
+                  ><span style="font-size: 18px"
+                    >(Yes you could've done it since the beginning)</span
+                  ></span
+                >
               </div>
             </div>
           </div>
-    </main>
+        </main>
     <aside class="progress-bar">
     <div class="progress-container">
         <div class="progress" style="height: 0%;"></div>
