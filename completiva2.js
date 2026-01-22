@@ -1208,7 +1208,7 @@ const pages = {
         padding: 0.625rem;
         font-size: 22px;
       ">
-        Here the mastery effect is <span style="color:rgba(136, 98, 162, 1)">significative</span>.<br> But even BETTER !<br>
+        Here the mastery effect is <span style="color:rgba(136, 98, 162, 1)">significant</span>.<br> But even BETTER !<br>
         It's <span style="color:rgba(136, 98, 162, 1)">independent</span> from the average rating.<br>
         <span style="color: #6f6767; font-size: 1.25rem">-- it means that a higher average rating of a game doesn't influence the results --</span><br>
         People (on Backloggd) really like <span style="color:rgba(136, 98, 162, 1)">MASTERING</span> a game, not only play a good one !!
